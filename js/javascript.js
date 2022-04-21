@@ -1,18 +1,22 @@
 "use strict";
 
-console.log("arr" + " - object");
-console.log(4 + "5");
-
-let incr = 10;
-let decr = 10;
-
-//++incr;
-//--decr;
-
-console.log(++incr);
-console.log(--decr);
 
 
-console.log(2+2*2 !== "6");
 
+
+let numberOfFilms = prompt("Сколько фильмов вы уже посмотрели?");
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {
+      lastSeenMovie: movieAward
+    },
+    actors: {
+        
+    },
+    genres: [],
+    privat: false
+};
+
+let lastSeenMovie = prompt("Один из последних просмотреных фильмов?");
+let movieAward = prompt("На сколько оцените его?");
 

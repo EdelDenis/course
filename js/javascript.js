@@ -165,7 +165,7 @@ do {
 while(num < 55);*/
 
 
-let num =50;
+let nu =50;
 
 for (let i = 1; i < 10; i++){
     if(i === 6) {
@@ -229,8 +229,27 @@ for (let i = 2; i <= 16; i++) {
         }
      }
 
+/* ------------ФУНКЦИИ------------*/
 
+let num = 20;
+function showFirstMessage(text) {
+    console.log(text);
+    console.log(num);
+}
 
+showFirstMessage("Hi");
+console.log(num);
 
+function calc (a,b) {
+    return (a+b);
+}
 
+console.log(calc(7,5));
 
+function ret() {
+    let num = 50;
+    return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);

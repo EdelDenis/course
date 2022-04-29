@@ -355,16 +355,91 @@ learnJS("JavaScript", done);
 
 /* -----------Объекты, деструктуризация объектов (ES6)------------*/
 
+const options = {
+    name: "test",
+    width: 1024,
+    height:1024,
+    colors: {
+        border: "black",
+        bg: "red"
+    },
+    makeTest : function () {
+        console.log("Test")
+    }
+};
+
+options.makeTest();
+
+const {border,bg} = options.colors;
+console.log(border);
+
+console.log(Object.keys(options).length)
+
+console.log(options.name);
+
+//delete options.name;
+ 
+console.log(options);
 
 
+let counter = 0;
+ for(let key in options) {
+     if (typeof(options[key]) === "object" ){
+         for(let i in options[key]){
+            console.log("Свойство " + i + "имеет значение " + options[key][i]);
+            
+         }
+     } else {
+     console.log("Свойство " + key + "имеет значение " + options[key]);
+     counter++
+     }
+ }
 
-console.log(Object.keys(options).length);
+ console.log(counter);
+     
+
+
 
 
 // -------------- МАССИВЫ И ПСЕВДОМАССИВЫ ----------------
 
+const array = [2,3,6,8,10];
+array.sort(compareNum);
+function compareNum(a,b) {
+    return a - b;
+}
+//array[99] = 0;
+//console.log(array.length);
+console.log(array);
 
+array.forEach(function(item,i,array) {
+      console.log(i  + ": " + item + " " +  "внутри массива " + array )
+});
 
+//array.pop();
+//array.push(10);
+console.log(array);
+//перебрать массив
+for (let i=0;i<array.length;i++) {
+    console.log(array[i]);
+}
+// аналог
+for (let value of array) {
+    console.log(value);
+}
+
+//сделать из строки массив 
+
+const strs = prompt ("", "" );
+const products = strs.split(", ");
+
+console.log(strs)
+
+// сделать из массива строку 
+
+//const strs = prompt ("", "" );
+//const products = strs.split(", ");
+//console.log(products.join(" ; "))
 
 // Передача по ссылке или по значению, Spread оператор (ES6-ES9)
 

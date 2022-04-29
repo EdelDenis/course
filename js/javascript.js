@@ -355,47 +355,7 @@ learnJS("JavaScript", done);
 
 /* -----------Объекты, деструктуризация объектов (ES6)------------*/
 
-const options = {
-    name: "test",
-    width: 1024,
-    height: 1024,
-    colors: {
-        border: "black",
-        bg: "red"
-    },
-    makeTest: function(){
-        console.log("Test");
-    }
-};
 
-options.makeTest();
-
-const {border, bg} = options.colors;
-
-console.log(border);
-
-/*console.log(options.name);
-
-//delete options.name - удалить ключ и значение
-
-console.log(options);
-
-let counter = 0;
-
-
-for (let key in options) {
-    if (typeof(options[key]) === "object"){
-        for(let i in options[key]){
-            console.log("Свойство " + i + "имеет значение " + options[key][i]);
-            counter++
-        }
-    } else {
-        console.log("Свойство " + key + "имеет значение " + options[key]);
-        counter++
-    }
-    
-}
-console.log(counter);*/
 
 
 console.log(Object.keys(options).length);
@@ -403,92 +363,8 @@ console.log(Object.keys(options).length);
 
 // -------------- МАССИВЫ И ПСЕВДОМАССИВЫ ----------------
 
-const array = [1,2,3,6,8];
-
-//array[99] = 0;
-//console.log(array.length);
-
-array.forEach(function(item, i, array){
-    console.log([i] +":" + [item] + "внутри массива" + [array])
-});
-
-//array.pop() - удалить с конца;
-//array.push(10) - добавить в конец
-
-
-
-console.log(array);
-
-for (let i = 0; i<array.length;i++) {
-    console.log(array[i]);
-}
-
-for (let value of array) {
-    console.log(value);
-}
-
-
-const string = prompt("", "");
-
-const products = string.split(", ");
-products.sort();
-console.log(products.join("; ")); 
-
-const arrayNum = [2,13,26,8,10];
-arrayNum.sort(compareNum);
-console.log(arrayNum);
-
-function compareNum(a,b) {
-    return a - b;
-}
 
 
 
 // Передача по ссылке или по значению, Spread оператор (ES6-ES9)
 
-let a = 5,
-    b = a;
-
- b = b + 5;
- 
- console.log(b);
- console.log(a);
-
- const obj = {
-     a : 5,
-     b: 1
- };
-
- const copy = obj;
-
- //copy.a = 10;
-
- //console.log(copy);
- //console.log(obj);
-
- function copy (mainObj) {
-       let objCopy = {};
-
-       let key;
-       for(key in mainObj){
-           objCopy[key] = mainObj[key];
-       }
-
-       return objCopy;
- }
-
- const numbers = {
-     a:2,
-     b:5,
-     c:{
-         x:7,
-         y:4
-     }
- };
-
- const newNumbers = copy(numbers);
-
- newNumbers.a = 10;
-
- console.log(newNumbers);
- console.log(numbers);

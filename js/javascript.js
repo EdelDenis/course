@@ -501,5 +501,39 @@ console.log(Object.assign(numbers, add));
 
 //-------------------- ОСНОВЫ ООП --------------------
 
+let stre = "some";
+let streObj = new String(stre);
+
+console.log(typeof(stre));
+console.log(typeof(streObj));
+
+console.dir([1,2,3]);
+
+
+// ПРОТОТИП
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function () {
+        console.log("Hello")
+    }
+}; 
+
+const john = Object.create(soldier);
+
+/*const john = {
+    health: 100
+}*/
+
+//установить прототип
+// john.__proto__ = soldier - устаревшая запись
+
+//Object.setPrototypeOf(john, soldier) -- /* установили прототип для джона от солдата */
+
+john.sayHello();
+
+
+
+
 
 

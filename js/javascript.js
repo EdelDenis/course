@@ -1,26 +1,6 @@
 "use strict";
 
-/*let numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
-let personalMovieDB = {
-    count: numberOfFilms,
-    movies: {
-      
-    },
-    actors: {},
-    genres: [],
-    privat: false
-};
-let lastSeenMovie1 = prompt("Один из последних просмотреных фильмов?", "");
-let movieAward1 = prompt("На сколько оцените его?", "");
-let lastSeenMovie2 = prompt("Один из последних просмотреных фильмов?", "");
-let movieAward2= prompt("На сколько оцените его?", "");
-
-
-personalMovieDB.movies[lastSeenMovie1] = movieAward1;
-personalMovieDB.movies[lastSeenMovie2] = movieAward2;
-
-console.log(personalMovieDB);*/
 
 
 if (1) {
@@ -229,9 +209,52 @@ for (let i = 2; i <= 16; i++) {
         }
      }
 
-/* ------------ФУНКЦИИ------------*/
+/* ------------ФУНКЦИИ,СТРЕЛОЧНЫЕ ФУНКЦИИ(ЕС6)------------*/
+
+let num = 20;
+// FUNCTION DECLARATION - НЕ ВАЖНО ГДЕ ВЫЗЫВАТЬ ЕЕ(МОЖНО И ДО И ПОСЛЕ ЕЕ ОБЬЯВЛЕНИЯ);
+function showFirstMessage (text) {
+    console.log(text);
+    let num = 10;
+    console.log(num);
+}
+
+showFirstMessage("Hello world");
+console.log(num);
+
+//function calc (a,b) {
+ //   return (a + b);
+//}
+
+console.log(calc(7,5));
+console.log(calc(5,5));
+console.log(calc(7,9));
+
+function ret() {
+    let num = 50;
+    return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
 
 
+//FUNCTION EXPRESSION - МОЖНО ВЫЗВАТЬ ТОЛЬКО ПОСЛЕ ОБЬЯВЛЕНИЯ ЭТОЙ ФУНКЦИИ 
+
+const logger = function () {
+   console.log("Hello");
+};
+
+logger();
+
+//СТРЕЛОЧНАЯ ФУНКЦИЯ ----- ES6
+
+const calc = (a,b) => { 
+    console.log("1");
+    return a + b;
+};
+
+calc(5,5);
 
 
 /*-----------МЕТОДЫ И СВОЙСТВА СТРОК И ЧИСЛЕ------------*/
@@ -255,8 +278,8 @@ console.log(logg.substring(6,11));
 
 console.log(logg.substr(6,4));
 
-const num = 12.2;
-console.log(Math.floor(num)); // math.round тоже
+const numbe = 12.2;
+console.log(Math.floor(numbe)); // math.round тоже
 
 const test = "12.2px";
 

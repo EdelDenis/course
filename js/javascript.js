@@ -1,8 +1,36 @@
 "use strict";
 
+//Классификация типов данных в JavaScript-------------------------------
 
+let number = 4.6;
 
+console.log(4/0);
+console.log("string" * 9);
 
+const person = "5";
+console.log(typeof(person));
+
+const bool = true;
+
+console.log(something); //null 
+
+let und;
+console.log(und);
+
+const obje = {
+    name: "John",
+    age:25,
+    isMarriend: false
+};
+
+//console.log(obje.name);
+console.log(obje["name"]);
+
+let arra = ["plum.png", "orange.jpg", 6,  "apple.bmp" , {} , []];
+
+console.log(arra[0]);
+
+// УСЛОВИЯ ------------------------------------------
 if (1) {
     console.log("ok");
 } else {
@@ -366,6 +394,7 @@ let counter = 0;
 // -------------- МАССИВЫ И ПСЕВДОМАССИВЫ ----------------
 
 const array = [2,3,6,8,10];
+
 array.sort(compareNum);
 function compareNum(a,b) {
     return a - b;
@@ -374,8 +403,10 @@ function compareNum(a,b) {
 //console.log(array.length);
 console.log(array);
 
-array.forEach(function(item,i,array) {
-      console.log(i  + ": " + item + " " +  "внутри массива " + array )
+// МЕТОД FOREACH позволяет гибко перебрать все элементы которые находятся внутри массива
+
+array.forEach (function(item, i, arr){
+      console.log(i + " : " + item + "внутри массива " + arr)
 });
 
 //array.pop();
@@ -385,12 +416,12 @@ console.log(array);
 for (let i=0;i<array.length;i++) {
     console.log(array[i]);
 }
-// аналог
+// аналог (break и continue)
 for (let value of array) {
     console.log(value);
 }
 
-//сделать из строки массив 
+//сделать из строки в массив 
 
 const strs = prompt ("", "" );
 const products = strs.split(", ");
@@ -400,7 +431,6 @@ console.log(strs)
 // сделать из массива строку 
 
 //const strs = prompt ("", "" );
-//const products = strs.split(", ");
 //console.log(products.join(" ; "))
 
 // Передача по ссылке или по значению, Spread оператор (ES6-ES9)
@@ -555,6 +585,13 @@ console.log(typeof(Boolean("4")));
 console.log(typeof(!!"44444"));
 
 // ----------------------Замыкание и лексическое окружение------------------------
+
+
+
+
+
+
+
 
 
 

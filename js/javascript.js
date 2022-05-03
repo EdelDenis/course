@@ -358,19 +358,22 @@ const options = {
     }
 };
 
-options.makeTest();
+//options.makeTest();
 
-const {border,bg} = options.colors;
-console.log(border);
+//Деструктуризация обьекта -------------------
 
-console.log(Object.keys(options).length)
+//const {border,bg} = options.colors;
+//console.log(border);
 
-console.log(options.name);
+//console.log(Object.keys(options).length)
+
+//console.log(options.name);
 
 //delete options.name;
  
-console.log(options);
+//console.log(options);
 
+// Перебрать обьект---------------
 
 let counter = 0;
  for(let key in options) {

@@ -589,6 +589,18 @@ console.log(typeof(!!"44444"));
 
 // ----------------------Замыкание и лексическое окружение------------------------
 
+let numberr = 5; debugger
+
+function logNumber() {
+    let numberr = 4; debugger
+    console.log(numberr);
+}
+
+numberr = 6;
+
+logNumber(); debugger
+
+
 
 
 

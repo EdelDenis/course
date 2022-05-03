@@ -232,70 +232,9 @@ for (let i = 2; i <= 16; i++) {
 /* ------------ФУНКЦИИ------------*/
 
 
-/*let num = 20;
-function showFirstMessage (text) {
-    console.log(text);
-    console.log(num);
-}
-
-showFirstMessage("Hello world");
-console.log(num);
-
-function calc (a,b) {
-    return (a + b);
-}
-
-console.log(calc(7,5));
-
-function ret () {
-    let num = 50;
-    return num;
-}
-
-const anotherNum = ret();
-console.log(anotherNum);
-
-const logger = function() {
-    console.log("Hello");
-};
-
-logger();*/
-
-const calc = (a,b) => {
-    console.log("1");
-    return a + b;
-};
-
-let usdCurr = 28;
-const discount = 0.9;
-
-function convert (amount,curr) {
-    return amount * curr;
-}
-
-function promotion(result){
-    console.log(result * discount);
-}
-
-const res = convert(500,usdCurr)
-promotion(res);
-
-function test() {
-    for(let i = 0; i<5; i++){
-        console.log(i);
-        if(i === 3) return
-    }
-    console.log("Done");
-}
-
-test();
-
-function doNothing () {};
-    console.log(doNothing() === undefined);
 
 
-
-/*-----------МЕТОДЫ СТРОК И ЧИСЛЕ------------*/
+/*-----------МЕТОДЫ И СВОЙСТВА СТРОК И ЧИСЛЕ------------*/
 
 const str = "test";
 const arr = [1,2,3];
